@@ -3,12 +3,15 @@ from constants import *
 from constants import SCREEN_WIDTH
 from constants import SCREEN_HEIGHT
 
+
+
 def main():
     
-    print("Starting asteroids!")
-    print(f"Screen width: {SCREEN_WIDTH}")
-    print(f"Screen height: {SCREEN_HEIGHT}")
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    time = pygame.time.Clock()
+    dt = 0
+
+
 
     while True:
         for event in pygame.event.get():
@@ -17,6 +20,10 @@ def main():
         
         screen.fill((0, 0, 0))
         pygame.display.flip()
+
+
+        time.tick(60)
+        dt = time.tick(60)/1000
 
 
 
