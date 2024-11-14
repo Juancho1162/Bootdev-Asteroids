@@ -10,6 +10,14 @@ def main():
     print(f"Screen height: {SCREEN_HEIGHT}")
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
+    while True:
+        screen.fill((0, 0, 0))
+        pygame.display.flip()
+
+
+
+
+
 
 
 
