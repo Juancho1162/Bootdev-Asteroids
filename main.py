@@ -35,8 +35,8 @@ def main():
 
 
 
-        time.tick(60)
-        dt = time.tick(60)/1000
+        time.tick(180)
+        dt = time.tick(180)/1000
 
 
 
