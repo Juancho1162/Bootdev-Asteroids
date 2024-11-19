@@ -1,13 +1,11 @@
 import pygame
+import sys
 from asteroidfield import * 
 from asteroidfield import AsteroidField
 from constants import SCREEN_WIDTH
 from constants import SCREEN_HEIGHT
 from player import Player 
 from asteroid import Asteroid
-
-
-
 
 
 def main():
@@ -33,10 +31,15 @@ def main():
             if event.type == pygame.QUIT:
                 return
         
-        screen.fill((0, 0, 0))
+        screen.fill((0, 0, 0)) 
         
         for items in updatable:
             items.update(dt)
+
+        for items in aster_grp:
+            if items.colide(player):
+                print("Game over!")
+                sys.exit()
 
         for items in drawable:
             items.draw(screen)
