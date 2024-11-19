@@ -45,11 +45,11 @@ def main():
         for items in drawable:
             items.draw(screen)
 
-        for items in aster_grp:
+        for asteroid in aster_grp:
             for bullet in shots:
-                if items.colide(bullet):
+                if asteroid.colide(bullet):
                     bullet.kill()
-                    items.kill()
+                    asteroid.split()
 
 
         pygame.display.flip()
